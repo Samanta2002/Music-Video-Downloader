@@ -18,11 +18,14 @@ A simple and efficient **Windows-based** music and video downloader for YouTube 
     cd Music-Video-Downloader
 
 ### **2️⃣ Add to Environment Variables**
-**Step 1: Locate the /bin folder inside the ffmpeg folder.**
 
-**Step 2: Copy the full path of the /bin directory.**
+**Step 1: Install ffmpeg & Spotdl.**
 
-**Step 3: Add it to the Windows Environment Variables under PATH:**
+**Step 2: Locate the /bin folder inside the ffmpeg folder and put the spotdl.exe inside it.**
+
+**Step 3: Copy the full path of the /bin directory.**
+
+**Step 4: Add it to the Windows Environment Variables under PATH:**
 
         a. Press Win + R, type sysdm.cpl, and hit Enter.
         b. Go to Advanced > Environment Variables.
