@@ -11,7 +11,7 @@ CORS(app)  # Enable CORS for all routes
 
 @app.route("/")
 def home():
-    return send_from_directory("static", "index.html")  # Serve the HTML file from the same directory
+    return send_from_directory(".", "index.html")  # Serve the HTML file from the same directory
 
 # Helper function to get the local IP address
 def get_local_ip():
