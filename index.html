@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music & Video Downloader</title>
+    <link rel="stylesheet" href="static\styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="form-heading">Spotify Music Download</h1>
+        <form id="download-form">
+            <div class="input-group">
+                <label for="url">Enter the URL:</label>
+                <input type="text" id="url" name="url" placeholder="Paste the Spotify link...">
+            </div>
+
+            <div class="input-group">
+                <label for="platform">Select Platform:</label>
+                <select id="platform" name="platform" required>
+                    <option value="spotify">Spotify</option>
+                    <option value="youtube">YouTube</option>
+                </select>
+            </div>
+
+            <div class="actions">
+                <button type="button" id="select-path" onclick="selectOutputPath()">Select Folder</button>
+                <button type="submit" id="download-btn">Download</button>
+            </div>
+
+            <input type="hidden" id="output-path" name="output-path">
+        </form>
+        <div id="message"></div>
+    </div>
+    <script src="static\script.js"></script>
+</body>
+</html>
