@@ -17,6 +17,8 @@ A simple and efficient **Windows-based** music and video downloader for YouTube 
                   
     cd Music-Video-Downloader
 
+    install all depedencies mentioned in the test.py file.
+
 ### **2️⃣ Add to Environment Variables**
 
 **Step 1: Install ffmpeg & Spotdl.**
