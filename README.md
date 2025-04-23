@@ -19,9 +19,9 @@ A simple and efficient **Windows-based** music and video downloader for YouTube 
 
 ### **2️⃣ Add to Environment Variables**
 
-**Step 1: Download ffmpeg zip. Exrtract all files.**
+**Step 1: install ffmpeg and spotdl.**
 
-**Step 2: Locate the /bin folder inside the ffmpeg folder and put the spotdl.exe inside it.**
+**Step 2: Locate the /bin folder inside the ffmpeg folder and put "spotdl.exe" inside it.**
 
 **Step 3: Copy the full path of the /bin directory.**
 
