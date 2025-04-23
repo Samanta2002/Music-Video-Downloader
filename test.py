@@ -11,7 +11,7 @@ CORS(app)  # Enable CORS for all routes
 
 @app.route("/")
 def home():
-    return send_from_directory(".", "index.html")  # Serve the HTML file from the same directory
+    return send_from_directory("static", "index.html")  # Serve the HTML file from the same directory
 
 # Helper function to get the local IP address
 def get_local_ip():
@@ -47,7 +47,7 @@ def download_spotify_music(spotify_url, output_path):
     if not os.path.exists(output_path):
         os.makedirs(output_path)
 
-    command = ["spotdl", "--output", f"{output_path}", spotify_url]
+    command = ["spotdl", "--output", f"{output_path}", spotify_url, "--ffmpeg-args", "-codec:a libmp3lame -b:a 320k"]
     try:
         print(f"Running command: {' '.join(command)}")
         result = subprocess.run(command, capture_output=True, text=True)
