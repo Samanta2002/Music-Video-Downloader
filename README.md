@@ -17,7 +17,8 @@ A simple and efficient **Windows-based** music and video downloader for YouTube 
                   
     cd Music-Video-Downloader
 
-### **2️⃣ Add to Environment Variables**
+
+### **2️⃣ Set ups**
 
 **Step 1: install ffmpeg and spotdl.**
 
@@ -31,6 +32,12 @@ A simple and efficient **Windows-based** music and video downloader for YouTube 
         b. Go to Advanced > Environment Variables.
         c. Under System Variables, select Path and click Edit.
         d. Click New, paste the copied path, and save.
+        
+**Step 5: Create a folder static and put the .html, .css, and .js files inside the folder.**
+
+**Step 6: Run the command in the terminal**
+
+       pyinstaller --onefile --clean --noupx --add-data "static;static" --add-binary "ffmpeg/bin/ffmpeg.exe;ffmpeg" --add-binary "ffmpeg/bin/spotdl.exe;spotdl" --hidden-import yt_dlp test.py
 
 ### **3️⃣ Run the Application**
 
