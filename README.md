@@ -34,5 +34,5 @@ A simple and efficient **Windows-based** music and video downloader for YouTube 
 
 ### **3️⃣ Run the Application**
 
-    a. After setting up the environment variable, you can run the "app.exe".
+    a. After setting up the environment variable, you can run the "test.exe".
     b. After downloading press "ctrl+c" to close the console.
