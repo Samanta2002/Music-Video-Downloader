@@ -1,23 +1,32 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Harlow Solid Italic';
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    transition: background 0.5s ease;
     background-image: linear-gradient(to bottom, #1DB954, #121212);
+    transition: background 0.5s ease;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    gap: 50px;
 }
 
 .container {
     background: rgba(0, 0, 0, 0.85);
     padding: 30px 40px;
+    margin-left: -100px;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
     text-align: center;
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
     color: #ffffff;
 }
@@ -82,3 +91,75 @@ input, select {
     font-weight: bold;
     color: #ffffff;
 }
+
+.right-pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    height: 100vh;
+    padding: 20px;
+    position: relative; /*needed for stacking context*/
+}
+
+.right-pane img {
+    position: fixed; /*makes it stay fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /*centers it perfectly*/
+    max-width: 8000px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: -1;  /*pushes image behind the text*/
+    opacity: 1;   /*optional: semi-transparent effect*/
+}
+
+#typewriter {
+    font-size: 6.4em;
+    color: #ffffff;
+    font-weight: bold;
+    height: auto;
+    line-height: 1.2;
+}
+
+/*Floating Musical Notes Animation*/
+#music-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /*So it doesn't block clicks*/
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.note {
+    position: absolute;
+    font-size: 24px;
+    color: white;
+    animation: floatUp 5s linear forwards;
+    opacity: 0.9;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) scale(0.95);
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+
+
+
