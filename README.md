@@ -37,9 +37,9 @@ A simple and efficient **Windows-based** music and video downloader for YouTube 
 
 **Step 6: Run the command in the terminal**
 
-       pyinstaller --onefile --clean --noupx --add-data "static;static" --add-binary "ffmpeg/bin/ffmpeg.exe;ffmpeg" --add-binary "ffmpeg/bin/spotdl.exe;spotdl" --hidden-import yt_dlp test.py
+       pyinstaller --onefile --clean --noupx --add-data "static;static" --add-binary "ffmpeg/bin/ffmpeg.exe;ffmpeg" --add-binary "ffmpeg/bin/spotdl.exe;spotdl" --hidden-import yt_dlp app.py
 
 ### **3️⃣ Run the Application**
 
-    a. After setting up the environment variable, you can run the "test.exe".
+    a. After setting up the environment variable, you can run the "app.exe".
     b. After downloading press "ctrl+c" to close the console.
